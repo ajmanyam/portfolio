@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajay | Infrastructure & DevOps Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Ajay, an Infrastructure and DevOps Engineer specializing in AWS, GCP, Terraform, and Kubernetes."
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              mono: ["Fira Code", "monospace"],
+            },
+            colors: {
+              primary: "#2563eb", // blue-600
+              primaryLight: "#60a5fa", // blue-400
+              dark: "#0f172a", // slate-900 (blackish)
+              graytext: "#475569", // slate-600
+              lightgray: "#f8fafc", // slate-50
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="bg-white text-graytext font-sans antialiased selection:bg-primary selection:text-white"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/90 border-b border-slate-200"
+      id="navbar"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <div class="flex-shrink-0 flex items-center">
+            <a
+              href="#"
+              class="text-2xl font-bold text-dark group flex items-center gap-2"
+            >
+              <div
+                class="w-8 h-8 rounded bg-primary flex items-center justify-center text-white"
+              >
+                <i class="fas fa-terminal text-sm"></i>
+              </div>
+              <span class="tracking-tight"
+                >Ajay<span class="text-primary">.</span></span
+              >
+            </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8 items-center">
+            <a
+              href="#about"
+              class="text-sm font-medium hover:text-primary transition-colors text-dark"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="text-sm font-medium hover:text-primary transition-colors text-dark"
+              >Skills</a
+            >
+            <a
+              href="#experience"
+              class="text-sm font-medium hover:text-primary transition-colors text-dark"
+              >Experience</a
+            >
+            <a
+              href="#education"
+              class="text-sm font-medium hover:text-primary transition-colors text-dark"
+              >Education</a
+            >
+            <a
+              href="#contact"
+              class="px-5 py-2.5 rounded-md bg-primary text-white hover:bg-blue-700 shadow-md shadow-primary/30 hover:shadow-primary/50 transition-all font-medium"
+              >Get in Touch</a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="text-dark hover:text-primary focus:outline-none p-2"
+            >
+              <i class="fas fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Panel -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white border-b border-slate-200 absolute w-full left-0 shadow-xl"
+      >
+        <div class="px-4 pt-2 pb-6 space-y-2">
+          <a
+            href="#about"
+            class="block px-3 py-3 rounded-md text-base font-semibold text-dark hover:bg-lightgray hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-3 rounded-md text-base font-semibold text-dark hover:bg-lightgray hover:text-primary transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#experience"
+            class="block px-3 py-3 rounded-md text-base font-semibold text-dark hover:bg-lightgray hover:text-primary transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#education"
+            class="block px-3 py-3 rounded-md text-base font-semibold text-dark hover:bg-lightgray hover:text-primary transition-colors"
+            >Education</a
+          >
+          <div class="pt-2">
+            <a
+              href="#contact"
+              class="block w-full text-center px-4 py-3 rounded-md text-base font-bold text-white bg-primary shadow-md"
+              >Get in Touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="hero"
+      class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-lightgray"
+    >
+      <!-- Abstract Background Blobs -->
+      <div
+        class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob pointer-events-none"
+      ></div>
+      <div
+        class="absolute top-1/3 right-1/4 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000 pointer-events-none"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full mt-4 md:mt-0"
+      >
+        <div
+          class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8"
+        >
+          <!-- Hero Text Content -->
+          <div
+            class="w-full lg:w-1/2 order-2 lg:order-1 text-center lg:text-left flex flex-col justify-center"
+          >
+            <div
+              class="inline-flex items-center space-x-2 bg-blue-100/50 text-primary px-3 py-1 rounded-full text-sm font-mono font-medium mb-6 w-max mx-auto lg:mx-0 border border-blue-200"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-primary animate-pulse"
+              ></span>
+              <span>Available for new projects</span>
+            </div>
+
+            <h1
+              class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-dark mb-4 tracking-tight leading-tight"
+            >
+              Hi, my name is <br />
+              <span class="text-primary">Ajay.</span>
+            </h1>
+            <h2
+              class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-700 mb-6 leading-snug"
+            >
+              I build reliable infrastructure.
+            </h2>
+
+            <div class="h-10 mb-8 sm:mb-10 text-center lg:text-left">
+              <p
+                class="text-xl sm:text-2xl font-mono font-semibold text-dark flex items-center justify-center lg:justify-start"
+              >
+                <span class="text-primary mr-2">&gt;</span>
+                <span id="typing-text"></span>
+              </p>
+            </div>
+
+            <p
+              class="text-lg text-graytext mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
+            >
+              Over 6+ years working across AWS, Azure, GCP, Linux, Terraform,
+              and Python. I treat infrastructure as a codebase to ensure
+              production systems scale predictably, securely, and silently.
+            </p>
+
+            <div
+              class="flex flex-col sm:flex-row flex-wrap gap-4 justify-center lg:justify-start w-full px-4 sm:px-0"
+            >
+              <a
+                href="mailto:ajay2mlops@gmail.com"
+                class="w-full sm:w-auto px-8 py-3.5 rounded bg-primary text-white font-semibold shadow-lg shadow-primary/30 hover:shadow-primary/50 hover:bg-blue-700 hover:-translate-y-1 transition-all duration-300 text-center"
+              >
+                <i class="far fa-envelope mr-2"></i> Get in Touch
+              </a>
+              <a
+                href="Ajay_Infrastructure_DevOps Engineer.docx.docx"
+                download
+                class="w-full sm:w-auto px-8 py-3.5 rounded bg-white border border-slate-300 text-dark hover:border-slate-400 hover:bg-slate-50 transition-all duration-300 font-semibold text-center flex justify-center items-center shadow-sm"
+              >
+                <i class="fas fa-file-download mr-2 text-primary"></i> Download
+                Resume
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual (Animated SVG) -->
+          <div class="w-full lg:w-1/2 flex justify-center order-1 lg:order-2">
+            <div
+              class="relative w-full max-w-[350px] sm:max-w-[450px] lg:max-w-[550px] aspect-square"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 500 500"
+                class="w-full h-full drop-shadow-2xl"
+              >
+                <!-- Cloud Background Base -->
+                <path
+                  d="M150,250 C150,180 200,130 250,130 C280,130 300,140 320,160 C350,120 400,110 440,140 C480,170 490,220 470,260 C490,280 500,310 490,340 C480,380 430,400 390,400 L180,400 C130,400 100,370 100,320 C100,290 120,270 150,250 Z"
+                  fill="#ffffff"
+                  stroke="#e2e8f0"
+                  stroke-width="4"
+                />
+                <path
+                  d="M160,260 C160,200 200,160 250,160 C270,160 290,170 310,190 C330,160 370,150 400,170 C430,190 440,230 420,260 C440,280 450,300 440,320 C430,350 390,370 360,370 L190,370 C150,370 130,350 130,310 C130,290 140,270 160,260 Z"
+                  fill="#f8fafc"
+                  stroke="#cbd5e1"
+                  stroke-width="2"
+                />
+
+                <!-- Main Server Stack -->
+                <g
+                  class="animate-float"
+                  style="animation-duration: 6s; transform-origin: center"
+                >
+                  <rect
+                    x="200"
+                    y="220"
+                    width="140"
+                    height="170"
+                    rx="8"
+                    fill="#ffffff"
+                    stroke="#0f172a"
+                    stroke-width="5"
+                  />
+
+                  <!-- Server Blade 1 -->
+                  <rect
+                    x="215"
+                    y="240"
+                    width="110"
+                    height="30"
+                    rx="4"
+                    fill="#f1f5f9"
+                    stroke="#94a3b8"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="235"
+                    cy="255"
+                    r="5"
+                    fill="#2563eb"
+                    class="animate-pulse"
+                    style="animation-duration: 2s"
+                  />
+                  <circle cx="255" cy="255" r="4" fill="#0f172a" />
+                  <rect
+                    x="290"
+                    y="251"
+                    width="25"
+                    height="8"
+                    rx="2"
+                    fill="#e2e8f0"
+                  />
+
+                  <!-- Server Blade 2 -->
+                  <rect
+                    x="215"
+                    y="285"
+                    width="110"
+                    height="30"
+                    rx="4"
+                    fill="#f1f5f9"
+                    stroke="#94a3b8"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="235"
+                    cy="300"
+                    r="5"
+                    fill="#2563eb"
+                    class="animate-pulse"
+                    style="animation-duration: 2s; animation-delay: 0.5s"
+                  />
+                  <circle cx="255" cy="300" r="4" fill="#0f172a" />
+                  <rect
+                    x="290"
+                    y="296"
+                    width="25"
+                    height="8"
+                    rx="2"
+                    fill="#e2e8f0"
+                  />
+
+                  <!-- Server Blade 3 -->
+                  <rect
+                    x="215"
+                    y="330"
+                    width="110"
+                    height="30"
+                    rx="4"
+                    fill="#f1f5f9"
+                    stroke="#94a3b8"
+                    stroke-width="2"
+                  />
+                  <circle
+                    cx="235"
+                    cy="345"
+                    r="5"
+                    fill="#2563eb"
+                    class="animate-pulse"
+                    style="animation-duration: 2s; animation-delay: 1s"
+                  />
+                  <circle cx="255" cy="345" r="4" fill="#0f172a" />
+                  <rect
+                    x="290"
+                    y="341"
+                    width="25"
+                    height="8"
+                    rx="2"
+                    fill="#e2e8f0"
+                  />
+                </g>
+
+                <!-- Floating Node 1 (Database) -->
+                <g
+                  class="animate-float"
+                  style="animation-duration: 5s; animation-delay: 1s"
+                >
+                  <path
+                    d="M 110 210 Q 140 190 170 210 L 170 250 Q 140 270 110 250 Z"
+                    fill="#ffffff"
+                    stroke="#2563eb"
+                    stroke-width="4"
+                  />
+                  <path
+                    d="M 110 210 Q 140 230 170 210"
+                    fill="none"
+                    stroke="#2563eb"
+                    stroke-width="4"
+                  />
+                  <circle
+                    cx="140"
+                    cy="225"
+                    r="3"
+                    fill="#2563eb"
+                    class="animate-pulse"
+                  />
+                  <line
+                    x1="170"
+                    y1="230"
+                    x2="200"
+                    y2="280"
+                    stroke="#94a3b8"
+                    stroke-width="3"
+                    stroke-dasharray="6,6"
+                    class="animate-pulse"
+                    style="animation-duration: 1.5s"
+                  />
+                </g>
+
+                <!-- Floating Node 2 (Analytics/Metrics) -->
+                <g
+                  class="animate-float"
+                  style="animation-duration: 7s; animation-delay: 2s"
+                >
+                  <rect
+                    x="360"
+                    y="200"
+                    width="70"
+                    height="60"
+                    rx="6"
+                    fill="#ffffff"
+                    stroke="#2563eb"
+                    stroke-width="4"
+                  />
+                  <rect
+                    x="375"
+                    y="225"
+                    width="12"
+                    height="25"
+                    rx="2"
+                    fill="#93c5fd"
+                  />
+                  <rect
+                    x="395"
+                    y="215"
+                    width="12"
+                    height="35"
+                    rx="2"
+                    fill="#3b82f6"
+                  />
+                  <rect
+                    x="415"
+                    y="240"
+                    width="12"
+                    height="10"
+                    rx="2"
+                    fill="#1e40af"
+                  />
+                  <line
+                    x1="360"
+                    y1="230"
+                    x2="340"
+                    y2="260"
+                    stroke="#94a3b8"
+                    stroke-width="3"
+                    stroke-dasharray="6,6"
+                    class="animate-pulse"
+                    style="animation-duration: 1.5s; animation-delay: 0.5s"
+                  />
+                </g>
+
+                <!-- Floating Node 3 (Code/Functions) -->
+                <g
+                  class="animate-float"
+                  style="animation-duration: 4.5s; animation-delay: 0.5s"
+                >
+                  <circle
+                    cx="340"
+                    cy="120"
+                    r="35"
+                    fill="#ffffff"
+                    stroke="#2563eb"
+                    stroke-width="4"
+                  />
+                  <text
+                    x="340"
+                    y="128"
+                    font-family="monospace"
+                    font-weight="bold"
+                    font-size="24"
+                    fill="#0f172a"
+                    text-anchor="middle"
+                  >
+                    { }
+                  </text>
+                  <line
+                    x1="320"
+                    y1="145"
+                    x2="280"
+                    y2="220"
+                    stroke="#94a3b8"
+                    stroke-width="3"
+                    stroke-dasharray="6,6"
+                    class="animate-pulse"
+                    style="animation-duration: 1.5s; animation-delay: 1s"
+                  />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div
+        class="absolute bottom-6 sm:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce"
+      >
+        <span
+          class="text-xs font-mono text-slate-400 mb-2 uppercase tracking-widest hidden sm:block"
+          >Scroll</span
+        >
+        <i class="fas fa-arrow-down text-slate-400 text-lg"></i>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-20 lg:py-28 bg-white border-t border-slate-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center mb-12 lg:mb-16">
+          <h2
+            class="text-3xl md:text-5xl font-extrabold text-dark tracking-tight"
+          >
+            <span
+              class="text-primary font-mono text-2xl md:text-3xl mr-3 font-normal"
+              >01.</span
+            >About Me
+          </h2>
+          <div class="h-px bg-slate-200 flex-grow ml-6 max-w-xs"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div
+            class="space-y-6 text-graytext leading-relaxed text-lg order-2 lg:order-1"
+          >
+            <p>
+              I'm an Infrastructure/DevOps Engineer who treats infrastructure as
+              a codebase. I keep Terraform modules small, well-named, and
+              commented, so on-call engineers can reason about changes under
+              pressure.
+            </p>
+            <p>
+              I usually end up owning public cloud foundations, VPC layouts,
+              EKS/GKE clusters, and CI/CD deployment paths. I have a habit of
+              building small Python tools around AWS and GCP APIs to automate
+              routine tasks and eliminate toil.
+            </p>
+            <p>
+              Security is folded into my daily work—wiring IAM roles and policy
+              checks into CI so
+              <span class="bg-blue-50 text-primary font-semibold px-1 rounded"
+                >least privilege is a default, not an afterthought</span
+              >.
+            </p>
+            <div class="flex flex-wrap items-center gap-4 pt-6">
+              <div
+                class="flex items-center space-x-2 text-sm font-mono text-dark bg-lightgray px-4 py-2.5 rounded shadow-sm border border-slate-200"
+              >
+                <i class="fas fa-map-marker-alt text-primary"></i>
+                <span>Denton, TX</span>
+              </div>
+              <div
+                class="flex items-center space-x-2 text-sm font-mono text-dark bg-lightgray px-4 py-2.5 rounded shadow-sm border border-slate-200"
+              >
+                <i class="fas fa-envelope text-primary"></i>
+                <span>ajay2mlops@gmail.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative group order-1 lg:order-2">
+            <div
+              class="absolute -inset-2 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-2xl blur-lg opacity-60 group-hover:opacity-100 transition duration-500"
+            ></div>
+            <div
+              class="relative bg-white p-8 md:p-10 rounded-2xl border border-slate-200 shadow-xl shadow-slate-200/50 flex flex-col h-full"
+            >
+              <h3 class="text-2xl font-bold text-dark mb-6 flex items-center">
+                <i class="fas fa-terminal text-primary mr-3"></i> Core
+                Philosophy
+              </h3>
+              <ul class="space-y-5 font-sans text-base text-graytext">
+                <li class="flex items-start">
+                  <span class="text-primary mt-1 mr-3"
+                    ><i class="fas fa-check-circle"></i
+                  ></span>
+                  <div>
+                    <span class="text-dark font-bold"
+                      >Predictability over Magic:</span
+                    >
+                    Make deployments feel boring. Standardize health checks and
+                    rollout strategies.
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary mt-1 mr-3"
+                    ><i class="fas fa-check-circle"></i
+                  ></span>
+                  <div>
+                    <span class="text-dark font-bold">Code-Driven Ops:</span>
+                    Wire CI/CD pipelines so code, infrastructure, and Helm
+                    changes follow identical review habits.
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary mt-1 mr-3"
+                    ><i class="fas fa-check-circle"></i
+                  ></span>
+                  <div>
+                    <span class="text-dark font-bold">Actionable Alerts:</span>
+                    Live in logs and metrics. Trim noisy alerts until only real
+                    problems wake people up.
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-primary mt-1 mr-3"
+                    ><i class="fas fa-check-circle"></i
+                  ></span>
+                  <div>
+                    <span class="text-dark font-bold">Structural Clarity:</span>
+                    Provide concise incident runbooks, post-incident reviews,
+                    and architecture diagrams.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section
+      id="skills"
+      class="py-20 lg:py-28 bg-lightgray border-t border-slate-200"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-12 lg:mb-16">
+          <div
+            class="h-px bg-slate-300 flex-grow mr-6 max-w-xs hidden md:block"
+          ></div>
+          <h2
+            class="text-3xl md:text-5xl font-extrabold text-dark tracking-tight whitespace-nowrap"
+          >
+            <span
+              class="text-primary font-mono text-2xl md:text-3xl mr-3 font-normal"
+              >02.</span
+            >Technical Arsenal
+          </h2>
+          <div class="h-px bg-slate-300 flex-grow ml-6 md:max-w-xs"></div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8"
+        >
+          <!-- Skill Category -->
+          <div
+            class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-3xl text-primary group-hover:scale-110 transition-transform"
+            >
+              <i class="fab fa-aws"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-4">Cloud Platforms</h3>
+            <ul class="space-y-3 text-graytext text-sm md:text-base">
+              <li class="flex items-start">
+                <i class="fas fa-cloud text-primary mt-1 text-xs w-6"></i> AWS
+                (EC2, S3, RDS, EKS, Lambda, IAM)
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-cloud text-primary mt-1 text-xs w-6"></i> GCP
+                (Compute, GKE, Cloud SQL, IAM)
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-cloud text-primary mt-1 text-xs w-6"></i>
+                Microsoft Azure
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Category -->
+          <div
+            class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-3xl text-primary group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-4">
+              Infrastructure as Code
+            </h3>
+            <ul class="space-y-3 text-graytext text-sm md:text-base">
+              <li class="flex items-start">
+                <i class="fas fa-code text-primary mt-1 text-xs w-6"></i>
+                Terraform
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-code text-primary mt-1 text-xs w-6"></i> AWS
+                CloudFormation
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-code text-primary mt-1 text-xs w-6"></i>
+                Ansible, Chef
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Category -->
+          <div
+            class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-3xl text-primary group-hover:scale-110 transition-transform"
+            >
+              <i class="fab fa-docker"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-4">Containers & Orch.</h3>
+            <ul class="space-y-3 text-graytext text-sm md:text-base">
+              <li class="flex items-start">
+                <i class="fas fa-box-open text-primary mt-1 text-xs w-6"></i>
+                Kubernetes (EKS, GKE)
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-box-open text-primary mt-1 text-xs w-6"></i>
+                Docker
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-box-open text-primary mt-1 text-xs w-6"></i>
+                Helm
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Category -->
+          <div
+            class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-3xl text-primary group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-code-branch"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-4">
+              CI/CD & Version Control
+            </h3>
+            <ul class="space-y-3 text-graytext text-sm md:text-base">
+              <li class="flex items-start">
+                <i class="fas fa-random text-primary mt-1 text-xs w-6"></i>
+                GitHub Actions
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-random text-primary mt-1 text-xs w-6"></i>
+                Jenkins (Groovy Pipelines)
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-random text-primary mt-1 text-xs w-6"></i>
+                GitLab CI
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-random text-primary mt-1 text-xs w-6"></i> Git,
+                GitHub, GitLab
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Category -->
+          <div
+            class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-3xl text-primary group-hover:scale-110 transition-transform"
+            >
+              <i class="fab fa-python"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-4">Languages & Linux</h3>
+            <ul class="space-y-3 text-graytext text-sm md:text-base">
+              <li class="flex items-start">
+                <i class="fas fa-terminal text-primary mt-1 text-xs w-6"></i>
+                Python (Requests, boto3)
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-terminal text-primary mt-1 text-xs w-6"></i>
+                Go, Bash
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-terminal text-primary mt-1 text-xs w-6"></i>
+                Ubuntu, Amazon Linux, RHEL/CentOS
+              </li>
+            </ul>
+          </div>
+
+          <!-- Skill Category -->
+          <div
+            class="bg-white rounded-xl p-8 border border-slate-200 shadow-sm hover:shadow-lg hover:border-primary/40 transition-all duration-300 group"
+          >
+            <div
+              class="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center mb-6 text-3xl text-primary group-hover:scale-110 transition-transform"
+            >
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-4">
+              Observability & Security
+            </h3>
+            <ul class="space-y-3 text-graytext text-sm md:text-base">
+              <li class="flex items-start">
+                <i class="fas fa-lock text-primary mt-1 text-xs w-6"></i>
+                Prometheus, Grafana, ELK Stack
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-lock text-primary mt-1 text-xs w-6"></i>
+                CloudWatch, Stackdriver
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-lock text-primary mt-1 text-xs w-6"></i> AWS
+                KMS, HashiCorp Vault
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-lock text-primary mt-1 text-xs w-6"></i>
+                Security Groups, VPC Policies
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section
+      id="experience"
+      class="py-20 lg:py-28 bg-white border-t border-slate-200"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center mb-16 px-4">
+          <h2
+            class="text-3xl md:text-5xl font-extrabold text-dark tracking-tight"
+          >
+            <span
+              class="text-primary font-mono text-2xl md:text-3xl mr-3 font-normal"
+              >03.</span
+            >Where I've Worked
+          </h2>
+        </div>
+
+        <div
+          class="relative border-l-2 border-slate-200 ml-4 md:ml-[50%] space-y-16 py-4"
+        >
+          <!-- Job 1 -->
+          <div
+            class="relative w-full md:w-[calc(100%+2px)] md:-ml-[calc(100%+2px)] md:pr-12 md:text-right group"
+          >
+            <div
+              class="absolute w-4 h-4 rounded-full bg-white border-2 border-primary -left-[9px] md:left-auto md:-right-[9px] top-1.5 shadow-sm group-hover:bg-primary transition-colors"
+            ></div>
+            <div class="pl-8 md:pl-0">
+              <h3 class="text-2xl font-bold text-dark">
+                DevOps/MLOps Engineer
+                <span class="text-primary">@ T-Mobile</span>
+              </h3>
+              <div class="font-mono text-sm text-slate-500 my-2 font-medium">
+                <i class="far fa-calendar-alt text-primary md:hidden mx-1"></i>
+                Jun 2024 – Present | Seattle, WA
+                <i
+                  class="far fa-calendar-alt text-primary hidden md:inline ml-1"
+                ></i>
+              </div>
+              <p
+                class="text-graytext text-base leading-relaxed md:ml-auto md:max-w-xl"
+              >
+                Built core AWS infrastructure using Terraform with S3 state and
+                DynamoDB locking. Moved ML workloads from EC2 to EKS with
+                auto-scaling to prevent job collisions. Set up GitHub Actions
+                for model services including image builds and Helm deploys.
+                Replaced IAM keys with IAM roles (IRSA) for least privilege.
+              </p>
+            </div>
+          </div>
+
+          <!-- Job 2 -->
+          <div class="relative w-full md:w-full md:pl-12 group">
+            <div
+              class="absolute w-4 h-4 rounded-full bg-white border-2 border-primary -left-[9px] md:-left-[9px] top-1.5 shadow-sm group-hover:bg-primary transition-colors"
+            ></div>
+            <div class="pl-8 md:pl-0">
+              <h3 class="text-2xl font-bold text-dark">
+                Software & DevOps Engineer
+                <span class="text-primary">@ Treevah</span>
+              </h3>
+              <div class="font-mono text-sm text-slate-500 my-2 font-medium">
+                <i class="far fa-calendar-alt text-primary mr-1"></i> Feb 2023 –
+                Jun 2024 | Chicago, IL
+              </div>
+              <p class="text-graytext text-base leading-relaxed md:max-w-xl">
+                Owned day-to-day AWS operations (EC2, RDS). Refactored legacy
+                CloudFormation into modern, reusable Terraform modules. Enforced
+                Git workflows for IaC. Wrote Python/boto3 tools for user
+                automation, security audit checks, and migrated monolithic
+                services to Serverless AWS Lambda.
+              </p>
+            </div>
+          </div>
+
+          <!-- Job 3 -->
+          <div
+            class="relative w-full md:w-[calc(100%+2px)] md:-ml-[calc(100%+2px)] md:pr-12 md:text-right group"
+          >
+            <div
+              class="absolute w-4 h-4 rounded-full bg-white border-2 border-primary -left-[9px] md:left-auto md:-right-[9px] top-1.5 shadow-sm group-hover:bg-primary transition-colors"
+            ></div>
+            <div class="pl-8 md:pl-0">
+              <h3 class="text-2xl font-bold text-dark">
+                DevOps Engineer
+                <span class="text-primary">@ Apollo Hospitals</span>
+              </h3>
+              <div class="font-mono text-sm text-slate-500 my-2 font-medium">
+                <i class="far fa-calendar-alt text-primary md:hidden mx-1"></i>
+                Nov 2019 – Dec 2022 | Hyderabad, India
+                <i
+                  class="far fa-calendar-alt text-primary hidden md:inline ml-1"
+                ></i>
+              </div>
+              <p
+                class="text-graytext text-base leading-relaxed md:ml-auto md:max-w-xl"
+              >
+                Administered daily operations for GCP (Compute Engine, Cloud
+                SQL, GKE) treating infrastructure as code via Terraform.
+                Containerized apps via GKE, configuring Cloud Build pipelines
+                with image signing, and managed Stackdriver alerts via SLO-style
+                dashboards to maximize performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section
+      id="education"
+      class="py-20 lg:py-28 bg-lightgray relative overflow-hidden border-t border-slate-200"
+    >
+      <!-- Glow effects -->
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100 rounded-full mix-blend-multiply filter blur-[120px] pointer-events-none opacity-50"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="flex items-center justify-between mb-12 lg:mb-16">
+          <div
+            class="h-px bg-slate-300 flex-grow mr-6 max-w-xs hidden md:block"
+          ></div>
+          <h2
+            class="text-3xl md:text-5xl font-extrabold text-dark tracking-tight"
+          >
+            <span
+              class="text-primary font-mono text-2xl md:text-3xl mr-3 font-normal"
+              >04.</span
+            >Education & Certs
+          </h2>
+          <div class="h-px bg-slate-300 flex-grow ml-6 md:max-w-xs"></div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
+          <!-- Education Column -->
+          <div>
+            <h3
+              class="text-2xl md:text-3xl font-bold text-dark mb-8 flex items-center"
+            >
+              <i
+                class="fas fa-graduation-cap text-primary mr-3 text-2xl md:text-3xl"
+              ></i>
+              Academia
+            </h3>
+            <div class="space-y-6">
+              <div
+                class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <h4 class="text-xl md:text-2xl font-bold text-dark mb-1">
+                  Master's in Information Technology
+                </h4>
+                <p class="text-primary font-bold text-lg mb-3">
+                  DePaul University
+                  <span class="text-slate-500 font-medium text-sm ml-2"
+                    >| Chicago, IL</span
+                  >
+                </p>
+                <div
+                  class="inline-flex items-center px-3 py-1 bg-slate-100 rounded font-mono text-sm text-slate-600 font-medium"
+                >
+                  <i class="far fa-calendar-alt mr-2 text-primary"></i> Jan 2023
+                  – June 2024
+                </div>
+              </div>
+              <div
+                class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <h4 class="text-xl md:text-2xl font-bold text-dark mb-1">
+                  Bachelor's in Computer Science
+                </h4>
+                <p class="text-primary font-bold text-lg mb-3">
+                  JNTU
+                  <span class="text-slate-500 font-medium text-sm ml-2"
+                    >| India</span
+                  >
+                </p>
+                <div
+                  class="inline-flex items-center px-3 py-1 bg-slate-100 rounded font-mono text-sm text-slate-600 font-medium"
+                >
+                  <i class="far fa-calendar-alt mr-2 text-primary"></i> March
+                  2016 – March 2020
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications Column -->
+          <div>
+            <h3
+              class="text-2xl md:text-3xl font-bold text-dark mb-8 flex items-center"
+            >
+              <i
+                class="fas fa-certificate text-primary mr-3 text-2xl md:text-3xl"
+              ></i>
+              Certifications
+            </h3>
+            <div
+              class="bg-white p-8 rounded-xl border border-slate-200 shadow-sm h-full flex flex-col justify-center"
+            >
+              <ul class="space-y-8">
+                <li class="flex items-center group">
+                  <div
+                    class="w-14 h-14 rounded bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100 text-primary mr-5 shadow-sm"
+                  >
+                    <i class="fab fa-aws text-2xl"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-dark font-bold text-lg leading-tight group-hover:text-primary transition-colors"
+                    >
+                      AWS Certified DevOps Engineer – Professional
+                    </h4>
+                  </div>
+                </li>
+                <li class="flex items-center group">
+                  <div
+                    class="w-14 h-14 rounded bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100 text-primary mr-5 shadow-sm"
+                  >
+                    <i class="fab fa-microsoft text-2xl"></i>
+                  </div>
+                  <div>
+                    <h4
+                      class="text-dark font-bold text-lg leading-tight group-hover:text-primary transition-colors"
+                    >
+                      Microsoft Certified DevOps – Expert
+                    </h4>
+                  </div>
+                </li>
+                <li class="flex items-start group">
+                  <div
+                    class="w-14 h-14 rounded bg-blue-50 flex items-center justify-center shrink-0 border border-blue-100 text-primary mr-5 shadow-sm"
+                  >
+                    <i class="fas fa-robot text-2xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-dark font-bold text-lg mb-2">
+                      Google Cloud AI Pathways
+                    </h4>
+                    <p
+                      class="text-sm text-graytext leading-relaxed font-medium"
+                    >
+                      • Intro to Generative AI Specialization<br />
+                      • Intro to Large Language Models<br />
+                      • Responsible AI Applying Principles
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer
+      id="contact"
+      class="bg-dark pt-24 pb-10 text-center border-t border-slate-800"
+    >
+      <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p
+          class="text-primary font-mono mb-4 text-base tracking-widest uppercase font-medium"
+        >
+          05. What's Next?
+        </p>
+        <h2 class="text-5xl md:text-6xl font-extrabold text-white mb-8">
+          Get In Touch
+        </h2>
+        <p
+          class="text-slate-400 text-lg md:text-xl mb-12 max-w-xl mx-auto leading-relaxed"
+        >
+          Currently looking for new opportunities. Whether you have an open
+          role, a complex infrastructure challenge, or just want to say hi, my
+          inbox is always open.
+        </p>
+        <a
+          href="mailto:ajay2mlops@gmail.com"
+          class="inline-block px-10 py-4 rounded bg-primary text-white hover:bg-white hover:text-dark transition-colors font-bold text-lg mb-24 shadow-lg"
+        >
+          Say Hello
+        </a>
+
+        <div
+          class="flex justify-center space-x-8 mb-10 text-3xl text-slate-500"
+        >
+          <a
+            href="mailto:ajay2mlops@gmail.com"
+            class="hover:text-white transition-colors transform hover:-translate-y-1 inline-block"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a
+            href="https://github.com/ajmanyam"
+            target="_blank"
+            class="hover:text-white transition-colors transform hover:-translate-y-1 inline-block"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/ajay-m-b78351250"
+            target="_blank"
+            class="hover:text-white transition-colors transform hover:-translate-y-1 inline-block"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+
+        <p class="text-slate-500 font-mono text-sm leading-relaxed">
+          <span class="text-slate-600 mt-2 block"
+            >&copy; 2026 Ajay. All rights reserved.</span
+          >
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>

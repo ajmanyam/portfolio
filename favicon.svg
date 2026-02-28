@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <rect width="100" height="100" rx="20" fill="#2563eb" />
+  <g fill="none" stroke="#ffffff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Terminal Prompt Symbol > -->
+    <path d="M 25 30 L 45 50 L 25 70" />
+    <!-- Underscore Symbol _ -->
+    <path d="M 55 70 L 75 70" />
+  </g>
+</svg>
